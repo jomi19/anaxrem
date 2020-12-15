@@ -18,8 +18,5 @@
     "require": {
         "anax/anax-ramverk1-me": "^1.0.0",
         "jomi19/anaxrem": "dev-master"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^7"
     }
 }
