@@ -1,4 +1,14 @@
 {
+    "name" : "anax/noname",
+    "description": "A me page for the ramverk1 course.",
+    "license": "MIT",
+    "minimum-stability": "beta",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Anax\\": "src/",
+            "Joakim\\": "src/"}
+    },
     "repositories": [
         {
             "type": "vcs",
@@ -7,6 +17,9 @@
     ],
     "require": {
         "anax/anax-ramverk1-me": "^1.0.0",
-        "anax/remserver": "dev-master"
+        "jomi19/anaxrem": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
     }
 }
