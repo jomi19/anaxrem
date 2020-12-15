@@ -1,0 +1,12 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/anaxrem/remserver"
+        }
+    ],
+    "require": {
+        "anax/anax-ramverk1-me": "^1.0.0",
+        "anax/remserver": "dev-master"
+    }
+}
