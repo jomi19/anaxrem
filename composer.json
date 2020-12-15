@@ -2,7 +2,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/anaxrem/remserver"
+            "url": "https://github.com/jomi19/anaxrem"
         }
     ],
     "require": {
