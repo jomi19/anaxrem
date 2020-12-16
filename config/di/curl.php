@@ -10,7 +10,7 @@ return [
             "shared" => true,
             "active" => false,
             "callback" => function () {
-                $service = new Joakim\Model\Curl();
+                $service = new Jomi19\Model\Curl();
                 $service->setDi($this);
                 return $service;
             }

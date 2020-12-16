@@ -1,6 +1,6 @@
 <?php
 
-namespace Joakim\View;
+namespace Jomi19\View;
 
 /**
  * Style chooser.

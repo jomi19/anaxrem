@@ -1,6 +1,6 @@
 <?php
 
-namespace Joakim\Controller;
+namespace Jomi19\Controller;
 
 use PHPUnit\Framework\TestCase;
 use Anax\DI\DIFactoryConfig;
@@ -19,7 +19,7 @@ class JsonWeatherControllerMockedTest extends TestCase
         
         $di->loadServices(ANAX_INSTALL_PATH . "/config/di");
         $di->get("cache")->setPath(ANAX_INSTALL_PATH . "/test/cache");
-        $di->setShared("curl", "\Joakim\Model\CurlWeatherMock");
+        $di->setShared("curl", "\Jomi19\Model\CurlWeatherMock");
         $this->weather = $di->get("weather");
         $this->di = $di;
         $this->controller = new JsonWeatherController();

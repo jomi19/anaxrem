@@ -10,7 +10,7 @@ return [
             "shared" => true,
             "active" => false,
             "callback" => function () {
-                $weather = new Joakim\Model\Weather();
+                $weather = new Jomi19\Model\Weather();
                 
                 $cfg = $this->get("configuration");
                 $config = $cfg->load("apikeys.php");

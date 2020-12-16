@@ -1,6 +1,6 @@
 <?php
 
-namespace Joakim\Controller;
+namespace Jomi19\Controller;
 
 use Anax\Commons\ContainerInjectableInterface;
 use Anax\Commons\ContainerInjectableTrait;
@@ -12,7 +12,7 @@ class WeatherController implements ContainerInjectableInterface
     {
 
         return $this->di->get("page")
-            ->add("joakim/weather/search")
+            ->add("jomi19/weather/search")
             ->render(["title" => "Testar"]);
     }
 
@@ -23,7 +23,7 @@ class WeatherController implements ContainerInjectableInterface
         
         if (is_string($weather)) {
             return $this->di->get("page")
-            ->add("joakim/weather/search", [$weather])
+            ->add("jomi19/weather/search", [$weather])
             ->render(["title" => "Testar"]);
         }
 
@@ -32,7 +32,7 @@ class WeatherController implements ContainerInjectableInterface
         ];
 
         return $this->di->get("page")
-            ->add("joakim/weather/debug", $data)
+            ->add("jomi19/weather/debug", $data)
             ->render(["title" => "Testar"]);
     }
 
@@ -43,7 +43,7 @@ class WeatherController implements ContainerInjectableInterface
 
         if (is_string($history[0])) {
             return $this->di->get("page")
-            ->add("joakim/weather/search", [$history])
+            ->add("jomi19/weather/search", [$history])
             ->render(["title" => "Testar"]);
         }
         $data = [
@@ -51,7 +51,7 @@ class WeatherController implements ContainerInjectableInterface
         ];
 
         return $this->di->get("page")
-            ->add("joakim/weather/history", $data)
+            ->add("jomi19/weather/history", $data)
             ->render(["title" => "Testar"]);
     }
 }

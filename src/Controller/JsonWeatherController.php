@@ -1,6 +1,6 @@
 <?php
 
-namespace Joakim\Controller;
+namespace Jomi19\Controller;
 
 use Anax\Commons\ContainerInjectableInterface;
 use Anax\Commons\ContainerInjectableTrait;
@@ -21,7 +21,7 @@ class JsonWeatherController implements ContainerInjectableInterface
         
         if (is_string($weather)) {
             return $this->di->get("page")
-            ->add("joakim/weather/search", [$weather])
+            ->add("jomi19/weather/search", [$weather])
             ->render(["title" => "Testar"]);
         }
 

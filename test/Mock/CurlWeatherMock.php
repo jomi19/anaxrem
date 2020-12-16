@@ -1,6 +1,6 @@
 <?php
 
-namespace Joakim\Model;
+namespace Jomi19\Model;
 
 class CurlWeatherMock extends Curl
 {
