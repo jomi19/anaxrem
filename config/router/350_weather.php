@@ -7,12 +7,12 @@ return [
         [
             "info" => "Ip.",
             "mount" => "weather",
-            "handler" => "\Joakim\Controller\WeatherController",
+            "handler" => "\Jomi19\Controller\WeatherController",
         ],
         [
             "info" => "Ip.",
             "mount" => "jsonweather",
-            "handler" => "\Joakim\Controller\JsonWeatherController",
+            "handler" => "\Jomi19\Controller\JsonWeatherController",
         ],
     ]
 ];
