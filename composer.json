@@ -1,22 +1,17 @@
 {
-    "name" : "anax/noname",
-    "description": "A me page for the ramverk1 course.",
-    "license": "MIT",
-    "minimum-stability": "beta",
-    "prefer-stable": true,
+    "name": "jomi19/anaxrem",
+    "type": "library",
+    "description": "Rem server with wheater info",
     "autoload": {
         "psr-4": {
-            "Anax\\": "src/",
-            "Joakim\\": "src/"}
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/jomi19/anaxrem"
+            "Jomi19\\": "src/",
+            "Anax\\": "src/"
         }
-    ],
+    },
     "require": {
-        "anax/anax-ramverk1-me": "^1.0.0",
-        "jomi19/anaxrem": "dev-master"
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
     }
 }
