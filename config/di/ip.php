@@ -10,7 +10,7 @@ return [
             "shared" => true,
             "active" => false,
             "callback" => function () {
-                $ipModel = new Joakim\Model\Ip();
+                $ipModel = new Jomi19\Model\Ip();
 
                 $cfg = $this->get("configuration");
                 $config = $cfg->load("apikeys.php");
