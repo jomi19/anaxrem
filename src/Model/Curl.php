@@ -1,6 +1,6 @@
 <?php
 
-namespace Joakim\Model;
+namespace Jomi19\Model;
 
 use Anax\Commons\ContainerInjectableInterface;
 use Anax\Commons\ContainerInjectableTrait;
