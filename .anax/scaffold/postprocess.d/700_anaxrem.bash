@@ -13,5 +13,7 @@ rsync -av vendor/jomi19/anaxrem/src ./
 # Copy the view files
 rsync -av vendor/jomi19/anaxrem/view ./
 
+rsync -av vendor/jomi19/anaxrem/test ./
+
 # Copy the documentation
 #rsync -av vendor/anax/remserver/content/read.md ./content/remserver-api.md
