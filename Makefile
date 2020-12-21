@@ -126,7 +126,7 @@ check: check-tools-bash check-tools-php check-docker
 
 # target: test                    - Run all tests.
 .PHONY:  test
-test: phpunit phpcs phpmd phpstan phploc behat shellcheck bats
+test: phpunit
 	@$(call HELPTEXT,$@)
 	composer validate
 
