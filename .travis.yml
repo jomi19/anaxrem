@@ -9,7 +9,7 @@ git:
     submodules: false
 
 before_script:
-    - composer install
+    - composer update
 
 script:
     -  vendor/bin/phpunit test --configuration .phpunit.xml
