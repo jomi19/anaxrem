@@ -23,7 +23,7 @@ class JsonControllerTest extends TestCase
         $di->setShared("curl", "\Jomi19\model\CurlMock");
         $this->controller = $di->get("ip");
 
-        $this->$di = $di;
+        $this->di = $di;
         $this->controller = new JsonController();
         $this->controller->setDI($this->di);
     }
