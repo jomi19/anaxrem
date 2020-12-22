@@ -48,19 +48,8 @@ class Ip
     {
         $api = $this->apiKey;
         $url = "http://api.ipstack.com/" .  $ipAdress . "?access_key=" . $api;
-
-        $curl = curl_init();
-        $valid = filter_var($ipAdress, FILTER_VALIDATE_IP);
-
-        if (!$valid) {
-            return ["type" => "Invalid ip", "ip" => $ipAdress];
-        }
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_URL, $url);
-
-        $data = curl_exec($curl);
-        curl_close($curl);
-        $data = json_decode($data, true);
+        $service = $this->di->get("curl");
+        $data = $service->singleCurl($url);
 
         return $this->formatOutput($data);
     }

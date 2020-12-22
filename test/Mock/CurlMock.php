@@ -2,7 +2,7 @@
 
 namespace Jomi19\Model;
 
-class CurlWeatherMock extends Curl
+class CurlMock extends Curl
 {
 
     public function multiCurl($urls)
@@ -87,6 +87,9 @@ class CurlWeatherMock extends Curl
 
     public function singleCurl($url)
     {
+        if (startsWith($url, "http://api.ipstack.com/")) {
+            echo "testar";
+        }
         $data = [
             "main" => [
                 "temp" => 10,
