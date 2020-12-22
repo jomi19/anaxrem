@@ -15,6 +15,7 @@ return [
                 $cfg = $this->get("configuration");
                 $config = $cfg->load("apikeys.php");
                 $settings = $config["config"] ?? null;
+                $ipModel->setDi($this);
 
                 if ($settings["ip"] ?? null) {
                     $ipModel->setApiKey($settings["ip"]);

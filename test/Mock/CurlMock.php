@@ -87,26 +87,39 @@ class CurlMock extends Curl
 
     public function singleCurl($url)
     {
-        if (startsWith($url, "http://api.ipstack.com/")) {
-            echo "testar";
-        }
-        $data = [
-            "main" => [
-                "temp" => 10,
-                "humidity" => 80,
-
-            ],
-            "wind" => [
-                "speed" => 5,
-            ],
-            "weather" => [
-                [
-                    "icon" => "13n",
-                    "description" => "lätt snöfall"
+        if (strpos($url, "http://api.ipstack.com/") !== false ) {
+            $data = [
+                "ip" => "111.222.333",
+                "type" => "ipv4",
+                "location" => [
+                    "country" => "land",
+                    "country_code" => "kod",
+                    "city" => "stad",
+                    "zip" => 00000,
+                    "latitude" => 1.1,
+                    "longitude" => 2.1
                 ]
-            ],
-            "dt" => 1607779692
-        ];
+                ];
+        } else {
+            $data = [
+                "main" => [
+                    "temp" => 10,
+                    "humidity" => 80,
+
+                ],
+                "wind" => [
+                    "speed" => 5,
+                ],
+                "weather" => [
+                    [
+                        "icon" => "13n",
+                        "description" => "lätt snöfall"
+                    ]
+                ],
+                "dt" => 1607779692
+            ];            
+        }
+
 
         return $data;
     }
