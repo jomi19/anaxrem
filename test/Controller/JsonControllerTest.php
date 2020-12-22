@@ -16,13 +16,14 @@ class JsonControllerTest extends TestCase
 
     protected function setUp(): void
     {
-        // Init service container $di to contain $app as a service
+        global $di;
         $di = new DIFactoryConfig();
         $di->loadServices(ANAX_INSTALL_PATH . "/config/di");
         $di->get("cache")->setPath(ANAX_INSTALL_PATH . "/test/cache");
+        $di-setShared("curl", "\Jomi19\model\CurlMock");
+        $this->controller = $di->get("ip");
 
-        $this->di = $di;
-        // Create and initiate the controller
+        $this->$di = $di;
         $this->controller = new JsonController();
         $this->controller->setDI($this->di);
     }
