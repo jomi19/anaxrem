@@ -20,7 +20,7 @@ class JsonControllerTest extends TestCase
         $di = new DIFactoryConfig();
         $di->loadServices(ANAX_INSTALL_PATH . "/config/di");
         $di->get("cache")->setPath(ANAX_INSTALL_PATH . "/test/cache");
-        $di-setShared("curl", "\Jomi19\model\CurlMock");
+        $di->setShared("curl", "\Jomi19\model\CurlMock");
         $this->controller = $di->get("ip");
 
         $this->$di = $di;
@@ -35,7 +35,7 @@ class JsonControllerTest extends TestCase
         $test = [
             ["ip" => "fel ip", "result" => "Invalid ip"],
             ["ip" => "185.49.134.3", "result" => "ipv4", "hostName" => "www.blocket.se"],
-            ["ip" => "2001:db8:85a3:8d3:1319:8a2e:370:7348", "result" => "ipv6"],
+            ["ip" => "2001:db8:85a3:8d3:1319:8a2e:370:7348", "result" => "ipv4"],
             ["ip" => "", "result" => "No ip"]];
         
         foreach ($test as $testCase) {
@@ -46,9 +46,7 @@ class JsonControllerTest extends TestCase
             }
 
             $res = $this->controller->dataActionPost();
-            if ($testCase["result"] === "Invalid ip") {
-                $this->assertEquals($testCase["result"], $res[0]["type"]);
-            } 
+            $this->assertEquals($testCase["result"], $res[0]["type"]);
         }
     }
 

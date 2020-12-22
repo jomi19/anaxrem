@@ -91,14 +91,15 @@ class CurlMock extends Curl
             $data = [
                 "ip" => "111.222.333",
                 "type" => "ipv4",
+                "country_name" => "land",
+                "country_code" => "kod",
+                "city" => "stad",
+                "zip" => "zip",
                 "location" => [
-                    "country" => "land",
-                    "country_code" => "kod",
-                    "city" => "stad",
-                    "zip" => 00000,
-                    "latitude" => 1.1,
-                    "longitude" => 2.1
-                ]
+                    "country_flag_emoji" => "emoji",
+                ],
+                "latitude" => 1.1,
+                "longitude" => 1.1
                 ];
         } else {
             $data = [

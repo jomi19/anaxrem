@@ -50,7 +50,7 @@ class JsonWeatherControllerMockedTest extends TestCase
             ["history" => false, "city" => "östersund",
             "url" => "api.openweathermap.org/data/2.5/weather?q=östersund&appid=42551b4ba28a7768f24f603b29721d33&units=metric&lang=se"],
             ["history" => false,
-            "url" => "api.openweathermap.org/data/2.5/weather?lat=63.176681518555&lon=14.636070251465&appid=42551b4ba28a7768f24f603b29721d33&units=metric&lang=se",
+            "url" => "api.openweathermap.org/data/2.5/weather?lat=1.1&lon=1.1&appid=42551b4ba28a7768f24f603b29721d33&units=metric&lang=se",
             "ip" => "83.255.152.42"]
         ];
         

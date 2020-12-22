@@ -18,9 +18,9 @@ class Ip
         }
     }
 
-    private function formatOutput($data) : array
+    private function formatOutput($data, $ipAdress) : array
     {
-        $hostName = $this->getHostName($data["ip"], $data["type"]);
+        $hostName = $this->getHostName($ipAdress, $data["type"]);
         $output = [
             "ip" => $data["ip"],
             "type" => $data["type"],
@@ -48,10 +48,15 @@ class Ip
     {
         $api = $this->apiKey;
         $url = "http://api.ipstack.com/" .  $ipAdress . "?access_key=" . $api;
+        $valid = filter_var($ipAdress, FILTER_VALIDATE_IP);
+        if (!$valid) {
+            return ["type" => "Invalid ip", "ip" => $ipAdress];
+        }
+        
         $service = $this->di->get("curl");
         $data = $service->singleCurl($url);
 
-        return $this->formatOutput($data);
+        return $this->formatOutput($data, $ipAdress);
     }
 
     public function getClientIp()
