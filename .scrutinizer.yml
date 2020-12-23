@@ -9,7 +9,7 @@ build:
         my-tests-with-coverage:
         tests:
             override:
-            - command: make phpunit
-            coverage:
-                file: build/coverage.clover
-                format: php-clover
+             -  command: make phpunit
+                coverage:
+                    file: build/coverage.clover
+                    format: php-clover
