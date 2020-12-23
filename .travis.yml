@@ -9,8 +9,8 @@ git:
     submodules: false
 
 before_script:
-    - make install
+    - composer install
 
 script:
     -  make check
-    -  make test
+    -  vendor/bin/phpunit test --configuration .phpunit.xml
