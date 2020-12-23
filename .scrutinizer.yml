@@ -4,12 +4,12 @@ filter:
 build:
     environment:
         php:
-            version: '7.4'
-  nodes:
-    my-tests-with-coverage:
-      tests:
-        override:
-          - command: make phpunit
-            coverage:
-                file: "build/coverage.clover"
-                format: "php-clover"
+            version: "7.4"
+    nodes:
+        my-tests-with-coverage:
+        tests:
+            override:
+            - command: make phpunit
+                coverage:
+                    file: "build/coverage.clover"
+                    format: "php-clover"
