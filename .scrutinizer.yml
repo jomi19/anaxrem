@@ -3,9 +3,14 @@ build:
         php:
             version: "7.4"
     nodes:
+        analysis:
+            tests:
+                override:
+                    - php-scrutinizer-run
         my-tests-with-coverage:
             tests:
                 override:
+                - php-scrutinizer-run
                 - command: ./vendor/bin/phpunit --configuration .phpunit.xml
                   coverage:
                     file: build/coverage.clover
