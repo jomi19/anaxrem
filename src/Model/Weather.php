@@ -93,8 +93,6 @@ class Weather implements ContainerInjectableInterface
                 "description" => $weather["current"]["weather"][0]["description"]
             ];
         }
-
-        return $output;
     }
 
     public function getWeatherHistory($params)
@@ -118,8 +116,8 @@ class Weather implements ContainerInjectableInterface
             return "No location found";
         }
         $data = $service->multiCurl($allUrl);
-
-        for ($x = 0; $x < count($data); $x++) {
+        $dataLength = count($data);
+        for ($x = 0; $x < $dataLength; $x++) {
             if ($x > 0) {
                 $allData[] = $this->formatWeather($data[$x]);
             }

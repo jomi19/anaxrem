@@ -18,7 +18,7 @@ class JsonWeatherControllerMockedTest extends TestCase
         $di = new DIFactoryConfig();
         
         $di->loadServices(ANAX_INSTALL_PATH . "/config/di");
-        $di->get("cache")->setPath(ANAX_INSTALL_PATH . "/test/cache");
+
         $di->setShared("curl", "\Jomi19\Model\CurlMock");
         $this->weather = $di->get("weather");
         $this->di = $di;
