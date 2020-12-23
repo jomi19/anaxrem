@@ -12,4 +12,4 @@ before_script:
     - composer install
 
 script:
-    -  vendor/bin/phpunit test --configuration .phpunit.xml
+    -  make test
