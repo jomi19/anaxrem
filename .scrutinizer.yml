@@ -2,9 +2,7 @@ filter:
     excluded_paths: [vendor/*, test/*]
 
 build:
-    environment:
-        php:
-            version: "7.4"
+
     nodes:
         my-tests-with-coverage:
         tests:
