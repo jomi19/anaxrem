@@ -6,16 +6,16 @@ filter:
 
 build:
   environment:
-    php: v7.4
+    php: 7.4
   dependencies:
     before:
       -
         command: "mkdir build"
 
-    tests:
-        override: 
-            -
-                command: "./vendor/bin/phpunit test --configuration .phpunit.xml"
-                coverage:
-                    file: "build/coverage.clover"
-                    format: "php-clover"
+tests:
+    override: 
+        -
+            command: "./vendor/bin/phpunit test --configuration .phpunit.xml"
+            coverage:
+                file: "build/coverage.clover"
+                format: "php-clover"
