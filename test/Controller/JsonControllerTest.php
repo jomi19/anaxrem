@@ -19,7 +19,7 @@ class JsonControllerTest extends TestCase
         global $di;
         $di = new DIFactoryConfig();
         $di->loadServices(ANAX_INSTALL_PATH . "/config/di");
-        $di->get("cache")->setPath(ANAX_INSTALL_PATH . "/test/cache");
+        $di->loadServices(ANAX_INSTALL_PATH . "/test/config/di");
         $di->setShared("curl", "\Jomi19\model\CurlMock");
         $this->controller = $di->get("ip");
 

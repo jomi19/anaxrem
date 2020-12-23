@@ -18,7 +18,7 @@ class JsonWeatherControllerMockedTest extends TestCase
         $di = new DIFactoryConfig();
         
         $di->loadServices(ANAX_INSTALL_PATH . "/config/di");
-        $di->get("cache")->setPath(ANAX_INSTALL_PATH . "/test/cache");
+        $di->loadServices(ANAX_INSTALL_PATH . "/test/config/di");
         $di->setShared("curl", "\Jomi19\Model\CurlMock");
         $this->weather = $di->get("weather");
         $this->di = $di;
@@ -48,9 +48,9 @@ class JsonWeatherControllerMockedTest extends TestCase
             ["history" => true, "lon" => 20,
             "url" => "No location found"],
             ["history" => false, "city" => "östersund",
-            "url" => "api.openweathermap.org/data/2.5/weather?q=östersund&appid=42551b4ba28a7768f24f603b29721d33&units=metric&lang=se"],
+            "url" => "api.openweathermap.org/data/2.5/weather?q=östersund&appid=yourkey&units=metric&lang=se"],
             ["history" => false,
-            "url" => "api.openweathermap.org/data/2.5/weather?lat=1.1&lon=1.1&appid=42551b4ba28a7768f24f603b29721d33&units=metric&lang=se",
+            "url" => "api.openweathermap.org/data/2.5/weather?lat=1.1&lon=1.1&appid=yourkey&units=metric&lang=se",
             "ip" => "83.255.152.42"]
         ];
         
