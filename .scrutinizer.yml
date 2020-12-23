@@ -5,12 +5,12 @@ filter:
     excluded_paths: [vendor/*, test/*]
 
 build:
-  enviroment:
+  environment:
     php: v7.4
-    dependencies:
-      before:
-        -
-          command: "mkdir build"
+  dependencies:
+    before:
+      -
+        command: "mkdir build"
 
     tests:
         override: 
