@@ -23,8 +23,7 @@ class JsonController implements ContainerInjectableInterface
         $json = [ "type" => "Invalid ip"];
 
         if (!isset($_POST["ip"]) || strlen($_POST["ip"]) < 1) {
-            $json = ["type" => "No ip"];
-            return [$json];
+            return [["type" => "No ip"]];
         }
 
         $ipAdress = $_POST["ip"];

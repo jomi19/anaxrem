@@ -32,8 +32,8 @@ class JsonWeatherControllerMockedTest extends TestCase
         $_POST["ip"] = "185.49.132.3";
         $res = $this->controller->historyActionPost();
         $res = $res[0]["data"];
-
-        for ($x = 0; $x < count($res); $x++) {
+        $resLenght = count($res);
+        for ($x = 0; $x < $resLenght; $x++) {
             $this->assertIsInt($res[$x]["temp"]);
             $this->assertIsInt($res[$x]["humidity"]);
             $this->assertIsInt($res[$x]["dt"]);
